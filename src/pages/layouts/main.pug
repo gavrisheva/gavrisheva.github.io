@@ -1,0 +1,36 @@
+html
+  head
+    block meta
+    meta(charset="UTF8")
+    link(rel="icon" href="images/favicon.png?v=2" type="image/png")
+    link(href="https://fonts.googleapis.com/css?family=Lora:400i&amp;subset=cyrillic" rel="stylesheet")
+    link(rel="stylesheet" href="styles/styles.css")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous")
+
+  body
+    header.page-header
+      .wrapper
+        .icon
+        .title Евгения Гавришева
+        .subtitle Учитель начальных классов
+
+    nav.nav-panel
+      .wrapper
+        .row.justify-content-around.text-center
+          a.item(href='index.html') Главная
+          a.item(href='about.html') Обо мне
+          a.item(href='lessons.html') Мои уроки
+          a.item(href='materials.html') Мои наработки
+
+    mixin list(data)
+      each lessons, topic in data
+        .each-topic
+          .common-title= topic
+          .list
+            each name, dir in lessons
+              a(href=dir).list-unit= name
+              br
+
+    block content
+
+    footer.page-footer 2017

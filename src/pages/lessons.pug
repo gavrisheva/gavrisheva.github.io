@@ -1,0 +1,61 @@
+extends layouts/main
+
+block meta
+  title Евгения Гавришева
+
+block content
+  - 
+    var topics_list = { 
+      'Физическая культура': {
+        'files/lessons/fk/2-konspect-legkaya_atletika.docx': 'Конспект урока по легкой атлетике во 2 классе',
+        'files/lessons/fk/4-plan-konspect_pryzhok_s_mesta.doc': 'План-конспект урока по лёгкой атлетике «Прыжок в длину с места» (4 класс)' 
+      },
+      'Технология': {
+        'files/lessons/tehnologiya/konspect-babochki.doc': 'План-конспект урока по литературному чтению «Бабочки. Как изготовить их из листа бумаги?»',
+        'files/lessons/tehnologiya/babochki.pptx': 'Презентация к уроку «Бабочки. Как изготовить их из листа бумаги?»' 
+      },
+      'Севастополеведение': {
+        'files/lessons/sevastopolevedenie/plan-konspect_chyornoe_more_i_ego_obitateli.doc': 'План-конспект урока «Чёрное море и его обитатели»'
+      },
+      'Изобразительное искусство': {
+        'files/lessons/izo/urok-risuem_zhivotnykh.doc': 'План конспект урока «Рисуем животных»',
+        'files/lessons/izo/plan-conspect-teatralnye_maski.docx': 'План-конспект урока «Театральные маски» (4 класса)' 
+      },
+      'Литературное чтение': {
+        'files/lessons/literatura/konspect-uroka-kolybelnye_pesni.docx': 'Конспект урока «Колыбельные песни»',
+        'files/lessons/literatura/kolybalnye.ppt': 'Презентация к уроку «Колыбельные песни»',
+        'files/lessons/literatura/kartochki.docx': 'Карточки по литературному чтению',
+        'files/lessons/literatura/plan-konspect-lisa_i_zhuravl.docx': 'План-конспект чтения «Лиса и журавль»',
+        'files/lessons/literatura/plan-konspect_druzhba.docx': 'План-конспект урока «Дружба»'
+      },
+      'Математика': {
+        'files/lessons/matematika/Didaktichekie_Igry_Po_Matematike_Na_Umnozhenie.docx': 'Дидактические игры для закрепления темы умножения',
+        'files/lessons/matematika/Prezentatsia_Po_Starinnym_Meram_Dlinny.pptx': 'Презентация «Старинные меры длины»',
+        'files/lessons/matematika/TEKhNOLOGIChESKAYa_KARTA_UROKA_PO_MATEMATIKE_na_temu_8.doc': 'Технологическая карта урока «Число и цифра 8»',
+        'files/lessons/matematika/Tekhnologicheskaya_Karta_Uroka_Po_Matematike.docx': 'Технологическая карта урока «Письменные приёмы сложения и вычитания двузначных чисел с переходом через десяток »',
+        'files/lessons/matematika/Umnozhenie_na_2.docx': 'План-конспект урока «Умножение числа 2»'
+      },
+      'Музыка': {
+        'files/lessons/muzyka/Karaoke-Prezentatsia_Vypal_Belenkiy_Snezhok.pptx': 'Караоке-Презентация «Выпал беленький снежок.pptx»'
+      },
+      'Окружающий мир': {
+        'files/lessons/okrmir/Tekhnologicheskaya_karta_uroka.docx': 'Технологическая карта урока «Путешествие по ленте времени»',
+        'files/lessons/okrmir/TK_Pravila_Vezhlivosti.doc': 'Технологическая карта урока «Правила вежливости»'
+      },
+      'Русский язык': {
+        'files/lessons/rusyaz/ChKChN.docx': 'Наглядность для сочетаний ЧК и ЧН',
+        'files/lessons/rusyaz/Didakticheskie_igry_na_urokakh_russkogo_yazyka.docx': 'Дидактические игры 1',
+        'files/lessons/rusyaz/Didakticheskie_Igry.docx': 'Дидактические игры 2',
+        'files/lessons/rusyaz/Fragment_Uroka_Pazhednye_Okonchania_Prilagatelnykh.docx': 'Фрагмент урока «Падежные окончания прилагательных»',
+        'files/lessons/rusyaz/Fragmenty_Uroka_I_Igra.docx': 'Фрагмент урока на отработку навыка написания разделительного мягкого знака. ',
+        'files/lessons/rusyaz/Priemy_slovarnoy_raboty_na_uroke_literaturnogo_chtenia.docx': 'Приемы словарной работы на уроке литературного чтения',
+        'files/lessons/rusyaz/Tema_Zvuk_I_Bukva_Zh.docx': 'Урок «Звук и буква Ж»',
+        'files/lessons/rusyaz/Uprazhnenia_Na_Slovarnuyu_Rabotu.docx': 'Упражнения на словарную работу',
+        'files/lessons/rusyaz/Sinonimy.docx': 'Задания для работы над синонимами',
+        'files/lessons/rusyaz/Zadanie_Na_Spryazhenie_Glagolov_Slovosochetania.docx': 'Задание на спряжение глаголов'
+      }
+    }
+
+  .my-lessons.bg-pattern
+    .wrapper
+      +list(topics_list)

@@ -1,0 +1,49 @@
+extends layouts/main
+
+block meta
+  title Евгения Гавришева
+
+block content
+  - 
+    var materials_list = { 
+      'Внеурочная деятельность': {
+        'files/materials/vneurok/ANKETA_DLYa_RODITELEJ.doc': 'Анкета для родителей',
+        'files/materials/vneurok/Beseda_Na_Temu_Slova_Sinonimy.doc': 'Беседа «Слова-синонимы»',
+        'files/materials/vneurok/Knizhka-Raskraska.docx': 'Книжка-раскраска «Волшебный мир растений Крыма»',
+        'files/materials/vneurok/Kvalifikatsionny_Ekzamen_Po_Vneurochnoy_Deyatelnosti.docx': 'План-конспект спортивно-оздоровительного мероприятия «Олимпийцы - эрудиты»',
+        'files/materials/vneurok/Podvizhnye_igry_na_urokakh_legkoy_atletiki.doc': 'Подвижные игры на уроках легкой атлетики',
+        'files/materials/vneurok/Progulka.docx': 'Прогулка «Севастопольская Зима»',
+        'files/materials/vneurok/Rabochaya_Programma_Kruzhka_2_Klass.doc': 'Рабочая программа кружка по русскому языку «Занимательная грамматика»',
+        'files/materials/vneurok/Stsenariy_sportivnogo_prazdnika.docx': 'Сценарий спортивного праздника «Весёлые старты»'
+      },
+      'Классное руководство': {
+        'files/materials/klass/ANKETA_DLYa_RODITELEJ.doc': 'Анкета для родителей 1',
+        'files/materials/klass/Anketa_dlya_roditeley_Eschyo.doc': 'Анкета для родителей 2',
+        'files/materials/klass/Buklet_Dlya_Roditeley.doc': 'Буклет для родителей по гиперактивности 1',
+        'files/materials/klass/Buklet.doc': 'Буклет для родителей по гиперактивности 2',
+        'files/materials/klass/Igry.doc': 'Игры для детей',
+        'files/materials/klass/Palchikovaya_gimnastika.docx': 'Пальчиковая гимнастика',
+        'files/materials/klass/Rabochaya_programma_1_klass.doc': 'Рабочая программа по севастополеведению для 1 класса ',
+        'files/materials/klass/Rabochaya_Programma_Kruzhka_2_Klass.doc': 'Рабочая программа кружка по русскому языку «Занимательная грамматика» (2 класс)',
+        'files/materials/klass/Stsenariy_KTD.docx': 'Сценарий КТД «Весенний праздник Поэзии»',
+        'files/materials/klass/Stsenariy_prazdnika_v_nachalnoy_shkole.doc': 'Сценарий праздника в начальной школе «Встреча Весны»',
+        'files/materials/klass/Uchebnaya_programma_1-4_Klassy.doc': 'Учебная программа курса «Севастополеведение» «Страницы истории Севастополя от основания до настоящего времени»'
+      },
+      'Методические материалы': {
+        'files/materials/metod/Didakticheskie_igry.docx': 'Дидактические игры',
+        'files/materials/metod/Didakticheskiy_Material_Padezhnye_Okonchania.docx': 'Дидактический материал падежные окончания',
+        'files/materials/metod/Etapy_Formirovania_Orfograficheskogo_Deystvia.doc': 'Этапы формирования орфографического действия при изучении правила правописания',
+        'files/materials/metod/Igra_Oden_Koren_Russkiy_Yazyk.docx': 'Игра по русскому языку «Одень корень»',
+        'files/materials/metod/Igry_po_matematike.docx': 'Игры по математике',
+        'files/materials/metod/Kartochki_Po_Okruzhayuschemu_Miru_Na_Temu_Pravila_Vezhlivosti.docx': 'Карточки по окружающему миру «Правила Вежливости»',
+        'files/materials/metod/Metodicheskie_rekomendatsii_Tsifry.docx': 'Методические рекомендации по написанию цифр',
+        'files/materials/metod/Metodicheskiy_Material_Na_Spryazhenie_Glagolov.docx': 'Методический материал на спряжение глаголов',
+        'files/materials/metod/Naglyadnost_Dlya_Zadaniy_S_Sinonimami.docx': 'Наглядность для заданий с синонимами',
+        'files/materials/metod/Naglyadnost_K_Uroku_Bukva_Zh.docx': 'Наглядность К уроку про букву Ж',
+        'files/materials/metod/Texty_Dlya_Vyrazitelnogo_Chtenia.doc': 'Тексты для выразительного чтения'
+      },
+    }
+
+  .my-materials.bg-pattern
+    .wrapper
+      +list(materials_list)
